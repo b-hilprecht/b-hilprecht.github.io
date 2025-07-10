@@ -1,4 +1,4 @@
-In our [last post](./2025-07-10-p-verified-log-1:-the-need-for-verification.md), we explored why the Taurus approach to distributed logs is compelling. Now it's time to prove it actually works—starting with the simplest possible scenario where everything works perfectly. You can find the code of the full specification on [github.](https://github.com/b-hilprecht/verified-distributed-log/01-no-failures)
+In our [last post](https://b-hilprecht.github.io/2025/07/10/p-verified-log-1-the-need-for-verification.html), we explored why the Taurus approach to distributed logs is compelling. Now it's time to prove it actually works—starting with the simplest possible scenario where everything works perfectly. You can find the code of the full specification on [github.](https://github.com/b-hilprecht/verified-distributed-log/tree/main/01-no-failures)
 
 ## P Language Fundamentals
 
