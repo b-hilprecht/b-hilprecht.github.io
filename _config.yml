@@ -1,0 +1,5 @@
+title: Benjamin Hilprecht
+description: Personal Page
+theme: minima
+plugins:
+  - jekyll-feed
