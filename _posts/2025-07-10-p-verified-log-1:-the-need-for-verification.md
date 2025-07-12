@@ -8,7 +8,7 @@ Most systems today, including [Amazon Aurora](https://assets.amazon.science/dc/2
 
 While this design works in practice, consensus protocols come with significant overhead. They exhibit high write amplification—if we want to guarantee three copies of our data, we need at least five nodes since we need a quorum. That's 67% (5 nodes instead of 3) more infrastructure than strictly needed. They also require at least two network roundtrips: from client to leader, then from leader to follower nodes and back.
 
-## Taurus: Being frugal in the cloud
+## Taurus: Being Frugal in the Cloud
 
 This is where the [Taurus system](https://arxiv.org/abs/2412.02792) offers an intriguing alternative: what if we just picked three nodes from a cluster and wrote our data to them? When a write fails, pick three different nodes and continue. No complex consensus protocol, no quorum calculations, no multi-round coordination.
 
@@ -50,4 +50,6 @@ The Taurus paper provides a compelling vision but leaves many implementation det
 
 In this series, we'll build and verify our system model step by step. We'll start by modeling the basic replication protocol assuming perfect networks and no failures. Then we'll add the complexity that makes distributed systems interesting: node failures, network partitions. Along the way we will become familiar with the P language including debugging tools.
 
-The [next post](https://b-hilprecht.github.io/2025/07/10/p-verified-log-2-modeling-the-happy-path.html) will dive into our first P model. We'll design the basic protocol for writing log entries to multiple nodes and verify that it maintains our safety properties even in this simplified world. From there, we'll add failures until we have a complete, verified system. The complete code can be found on [github.](https://github.com/b-hilprecht/verified-distributed-log/tree/main/)
+The [next post]({{ "/2025/07/10/p-verified-log-2-modeling-the-happy-path.html" | relative_url }}) will dive into our first P model. We'll design the basic protocol for writing log entries to multiple nodes and verify that it maintains our safety properties even in this simplified world. From there, we'll add failures until we have a complete, verified system. The complete code can be found on [github.](https://github.com/b-hilprecht/verified-distributed-log/tree/main/)
+
+{% include 2025-07-10-series.md %}
